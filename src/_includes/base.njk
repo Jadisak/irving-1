@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="backdrop-blur-xl backdrop-opacity-80 lg:bg-[url('/assets/08.jpeg')] bg-[url('/assets/07.jpeg')] bg-center bg-cover bg-no-repeat grid content-between min-h-screen">
+
+        <div class="w-full h-14 bg-black/70 absolute">
+            {% include 'header.njk' %}
+        </div>
+
+        <div class="px-4 py-8 my-16 flex items-center mx-auto">
+            {{ content | safe }}
+        </div>
+
+        <div class="z-10 absolute bottom-0 w-full h-12">
+        {% include 'footer.njk' %}
+        </div>
+
+    <script src="./app.js"></script>
+    <script>
+        // JavaScript code for automatic page refresh without setInterval
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {
+            location.reload();
+          }, 1000); // Refresh after 1 second of resizing completion
+        });
+      </script>
+
+</body>
+</html>

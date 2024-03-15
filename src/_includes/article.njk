@@ -1,0 +1,18 @@
+---
+layout: 'base.njk'
+---
+
+<article class="py-2 xl:p-6">
+    <div class="max-w-5xl mx-auto p-0 flex-1 space-y-6 overflow-hidden">
+        <h1 class="font-bold text-4xl text-center text-pink-100">
+            {{ title }}
+        </h1>
+        <figure class="text-white italic text-xs leading-7 h-auto w-full md:w-2/3 object-cover object-center mx-auto">
+            <img src="{{ image }}" alt="{{ imageAlt }}" class="border-white border-4 w-full object-cover object-center overflow-hidden">
+            <figcaption class="mx-auto">{{ author }} on {{ date| postDate }}</figcaption>
+        </figure>
+        <div  class="sm:columns-2 lg:columns-3 gap-4 border-b pb-8">
+            {{ content | safe}}
+        </div>
+    </div>
+</article>

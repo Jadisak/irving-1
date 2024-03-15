@@ -1,0 +1,62 @@
+<section class="max-w-6xl xl:max-w-[1440px] mx-auto text-white/60">
+    
+        <nav class="flex flex-wrap items-center md:px-4 px-2 py-2 lg:py-0">
+          
+            <a href="/" class="gap-2 hover:text-gray-300 inline-flex items-center leading-none mr-4 text-2xl text-white font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.142 40" width="1.5em" height="1.5em" fill="currentColor">
+              <path data-name="Path 7167" d="M20 40a20.005 20.005 0 0 1-7.785-38.428 19.983 19.983 0 0 1 21.927 4.286L29.895 10.1a14 14 0 1 0 0 19.79l4.247 4.247A19.937 19.937 0 0 1 20 40Z"/>
+              <path data-name="Path 7168" d="M20 14a6 6 0 1 1-6 6 6 6 0 0 1 6-6Z"/>
+              </svg>Irving<span class="font-thin"> Studio</span>
+            </a>
+
+            <div class="flex-1 hidden space-y-2 w-full lg:flex lg:items-center lg:space-x-4 lg:space-y-0 lg:w-auto">
+                <div class="flex flex-col ml-auto lg:flex-row">
+                    <a href="/" class="font-medium hover:text-gray-300 py-2 text-opacity-60 text-white lg:p-4 xl:px-6">Home</a>
+
+                    <a href="/blog" class="font-medium hover:text-gray-300 py-2 text-opacity-60 text-white lg:p-4 xl:px-6">Blog</a>
+                    
+                    <a href="/" class="font-medium hover:text-gray-300 py-2 text-opacity-60 text-white lg:p-4 xl:px-6">Events</a>
+                </div>
+                    <a href="/" class="duration-500 bg-gradient-to-t from-rose-600 to-rose-400 hover:from-pink-600 hover:to-pink-400 font-bold px-4 py-2 rounded text-white">Login</a>
+            </div>
+
+            <div id="hamburger" class="ml-auto cursor-pointer px-3 py-2 xrounded text-pink-600 lg:hidden hover:bg-red-800/0 duration-500" >
+                    <span class="block border-b-2 border-current my-1 w-6"></span> 
+                    <span class="block border-b-2 border-current my-1 w-6"></span> 
+                    <span class="block border-b-2 border-current my-1 w-6"></span> 
+            </div>
+
+            <div class="lg:hidden z-20">
+                <ul id="menu" class="hidden bg-indigo-900/90 backdrop-blur absolute left-0 top-14 w-full py-20 space-y-8 text-white text-center text-2xl">
+                  <h2>
+                    <a id="hLink" href="/" class="font-medium hover:text-pink-200 py-2 text-white lg:p-4 px-6 rounded-full border-2">HOME</a>
+                  </h2>
+                  <h2>
+                    <a id="hLink" href="/blog" class="font-medium hover:text-pink-200 py-2 text-white lg:p-4 px-6 rounded-full border-2">BLOG</a>
+                  </h2>
+                  <h2>
+                    <a id="hLink" href="/" class="font-medium hover:text-pink-200 py-2 text-white lg:p-4 px-6 rounded-full border-2">EVENTS</a>
+                  </h2>
+                </ul>
+            </div>
+        </nav>                     
+
+    <script>
+        const hamburger = document.querySelector("#hamburger")
+        const menu = document.querySelector("#menu")
+        const hLinks = document.querySelectorAll("#hLink")
+
+        hamburger.addEventListener("click", ()=>{
+            menu.classList.toggle("hidden")
+            hamburger.classList.toggle("bg-white")
+          })
+          
+          hLinks.forEach(link=>{
+            link.addEventListener("click", ()=>{
+              menu.classList.toggle("hidden")
+              hamburger.classList.toggle("bg-white")
+            })
+          })
+    </script>
+
+</section>
